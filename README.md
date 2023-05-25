@@ -16,6 +16,9 @@ pip install django-debug-toolbar
 //django rest
 pip install djangorestframework
 
+//install bootstrap5
+pip install django_bootstrap5
+
 //terminal (C:\projects\VoteX)
 //create scripts to sync models from models.py to postgresql (if changes was made)
 python .\manage.py makemigrations
@@ -68,3 +71,4 @@ npm run dev
 //VoteX floder is a core app, used to manage server and settings
 //VoteXApi is an app for back-end configuration
 //VoteXFront is React app for front-end development
+//Main React file = VoteXFront/src/components/App.js
