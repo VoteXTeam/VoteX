@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %} Delete ride {% endblock title %}
+
+{% block content %}
+    <form action="{% url 'delete_ride' item.pk %}" method="POST">
+        {% csrf_token %}
+        <a class="btn btn-primary" href="/export_ride">Go back</a>
+        <p>Actually delete "{{ item }}"?</p>
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+{% endblock content %}

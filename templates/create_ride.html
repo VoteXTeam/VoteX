@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %} Create ride {% endblock title %}
+
+{% block content %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="btn btn-primary">save</button>
+    </form>
+{% endblock content %}
