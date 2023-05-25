@@ -29,6 +29,29 @@ python .\manage.py migrate
 //needed node_modules
 //CD INTO "VoteXFront"!
 //npm to install all modules
+npm install webpack webpack-cli @babel/core babel-loader @babel/preset-env @babel/preset-react react react-dom @mui/material @emotion/react @emotion/styled @mui/icons-material @babel/plugin-proposal-class-properties react-router-dom browser-sync browser-sync-webpack-plugin --save-dev
+
+
+//how to start
+//from root VoteX directory run
+python .\manage.py runserver
+
+//then cd into VoteXFront and run
+npm run dev
+
+//connect to localhost:3000 from browser (for browser reload)
+//or to localhost:8000 (django)
+
+//edit App.js or any other file and press Ctrl + S to update browser
+
+//Structure:
+//VoteX floder is a core app, used to manage server and settings
+//VoteXApi is an app for back-end configuration
+//VoteXFront is React app for front-end development
+//Main React file = VoteXFront/src/components/App.js
+
+
+//NOTES
 //install webpack
 //From "VoteX/VoteXFront":
 npm install webpack
@@ -54,21 +77,3 @@ npm install react-router-dom
 npm install --save-dev browser-sync
 npm install --save-dev browser-sync-webpack-plugin
 
-
-//how to start
-//from root VoteX directory run
-python .\manage.py runserver
-
-//then cd into VoteXFront and run
-npm run dev
-
-//connect to localhost:3000 from browser (for browser reload)
-//or to localhost:8000 (django)
-
-//edit App.js or any other file and press Ctrl + S to update browser
-
-//Structure:
-//VoteX floder is a core app, used to manage server and settings
-//VoteXApi is an app for back-end configuration
-//VoteXFront is React app for front-end development
-//Main React file = VoteXFront/src/components/App.js
