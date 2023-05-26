@@ -5,8 +5,33 @@
 
 //(no additional components needed after install)
 //*set up python environment (I used Python 3.11)
-//install packages
+# //install packages:
+## //install pip packages (run from root folder):
+pip install django psycopg2 django-debug-toolbar djangorestframework django_bootstrap5
 
+## //create scripts to sync models from models.py to postgresql (if changes was made) (from root)
+//terminal (C:\projects\VoteX)
+python .\manage.py makemigrations
+
+## //(create tables) sync migrations created in previous step to postgresql (from root)
+python .\manage.py migrate
+## //npm to install all modules (run from VoteXFront):
+npm install webpack webpack-cli @babel/core babel-loader @babel/preset-env @babel/preset-react react react-dom @mui/material @emotion/react @emotion/styled @mui/icons-material @babel/plugin-proposal-class-properties react-router-dom browser-sync browser-sync-webpack-plugin --save-dev
+
+//connect to localhost:3000 from browser (for browser reload)
+//or to localhost:8000 (django)
+
+//edit App.js or any other file and press Ctrl + S to update browser
+
+
+//Structure:
+//VoteX floder is a core app, used to manage server and settings
+//VoteXApi is an app for back-end configuration
+//VoteXFront is React app for front-end development
+//Main React file = VoteXFront/src/components/App.js
+
+
+## NOTES
 //needed pip packages
 pip install django
 //postgreSQL connection
@@ -28,8 +53,6 @@ python .\manage.py migrate
 
 //needed node_modules
 //CD INTO "VoteXFront"!
-//npm to install all modules
-npm install webpack webpack-cli @babel/core babel-loader @babel/preset-env @babel/preset-react react react-dom @mui/material @emotion/react @emotion/styled @mui/icons-material @babel/plugin-proposal-class-properties react-router-dom browser-sync browser-sync-webpack-plugin --save-dev
 
 
 //how to start
@@ -51,7 +74,6 @@ npm run dev
 //Main React file = VoteXFront/src/components/App.js
 
 
-//NOTES
 //install webpack
 //From "VoteX/VoteXFront":
 npm install webpack
