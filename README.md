@@ -68,7 +68,7 @@ npm run dev
 //edit App.js or any other file and press Ctrl + S to update browser
 
 //Structure:
-//VoteX floder is a core app, used to manage server and settings
+//VoteX folder is a core app, used to manage server and settings
 //VoteXApi is an app for back-end configuration
 //VoteXFront is React app for front-end development
 //Main React file = VoteXFront/src/components/App.js
