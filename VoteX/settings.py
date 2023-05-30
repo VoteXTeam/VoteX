@@ -45,12 +45,12 @@ INSTALLED_APPS = [
     'django_bootstrap5',
     'VoteXApi',
     'VoteXFront',
-    'debug_toolbar',
+    # 'debug_toolbar',
     'rest_framework',
 ]
 
 MIDDLEWARE = [
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -60,9 +60,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-DEBUG_TOOLBAR_CONFIG = {
-    'SHOW_TOOLBAR_CALLBACK': lambda request: True if request.META['REMOTE_ADDR'] in INTERNAL_IPS else False,
-}
+# DEBUG_TOOLBAR_CONFIG = {
+#     'SHOW_TOOLBAR_CALLBACK': lambda request: True if request.META['REMOTE_ADDR'] in INTERNAL_IPS else False,
+# }
 
 ROOT_URLCONF = 'VoteX.urls'
 

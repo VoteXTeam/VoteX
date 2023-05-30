@@ -19,5 +19,6 @@ from VoteXFront.views import index
 
 urlpatterns = [
     path('', index),
+    path('login', index),
     # path('api/user/', UserList.as_view()),
 ]
