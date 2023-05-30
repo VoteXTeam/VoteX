@@ -16,7 +16,15 @@ python .\manage.py makemigrations
 ## //(create tables) sync migrations created in previous step to postgresql (from root)
 python .\manage.py migrate
 ## //npm to install all modules (run from VoteXFront):
-npm install webpack webpack-cli @babel/core babel-loader @babel/preset-env @babel/preset-react react react-dom @mui/material @emotion/react @emotion/styled @mui/icons-material @babel/plugin-proposal-class-properties react-router-dom browser-sync browser-sync-webpack-plugin --save-dev
+npm install webpack webpack-cli @babel/core babel-loader @babel/preset-env @babel/preset-react react react-dom@5 @mui/material @emotion/react @emotion/styled @mui/icons-material @babel/plugin-proposal-class-properties react-router-dom browser-sync browser-sync-webpack-plugin --save-dev
+
+## starting program
+//from root VoteX directory run
+python .\manage.py runserver
+
+//open another terminal
+//then cd into VoteXFront and run
+npm run dev
 
 //connect to localhost:3000 from browser (for browser reload)
 //or to localhost:8000 (django)

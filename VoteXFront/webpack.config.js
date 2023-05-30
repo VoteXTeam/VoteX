@@ -26,7 +26,7 @@ module.exports = {
     },
     plugins: [
         new BrowserSyncPlugin({
-            host: 'localhost',
+            host: '127.0.0.1',
             port: 3000,
             proxy: 'http://127.0.0.1:8000',
             files: ['./src/**/*'],
