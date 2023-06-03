@@ -1,8 +1,11 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from rest_framework import generics
+from rest_framework import generics, status
 from .models import User
 from .rest_serializers import UserSerializer
+from rest_framework.views import APIView
+from rest_framework.response import Response
+
 
 # Create your views here.
 def index(request):

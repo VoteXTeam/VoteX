@@ -7,7 +7,7 @@
 //*set up python environment (I used Python 3.11)
 # //install packages:
 ## //install pip packages (run from root folder):
-pip install django psycopg2 django-debug-toolbar djangorestframework django_bootstrap5
+pip install django psycopg2 django-multiselectfield django-debug-toolbar djangorestframework django_bootstrap5
 
 ## //create scripts to sync models from models.py to postgresql (if changes was made) (from root)
 //terminal (C:\projects\VoteX)
