@@ -6,8 +6,9 @@
 //(no additional components needed after install)
 //*set up python environment (I used Python 3.11)
 # //install packages:
+// if psycopg2 doesn't work, use psycopg2-binary
 ## //install pip packages (run from root folder):
-pip install django psycopg2 django-multiselectfield django-debug-toolbar djangorestframework django_bootstrap5
+pip install django psycopg2 axios django-multiselectfield django-debug-toolbar djangorestframework django_bootstrap5
 
 ## //create scripts to sync models from models.py to postgresql (if changes was made) (from root)
 //terminal (C:\projects\VoteX)
@@ -16,7 +17,7 @@ python .\manage.py makemigrations
 ## //(create tables) sync migrations created in previous step to postgresql (from root)
 python .\manage.py migrate
 ## //npm to install all modules (run from VoteXFront):
-npm install webpack webpack-cli @babel/core babel-loader @babel/preset-env @babel/preset-react react react-dom@5 @mui/material @emotion/react @emotion/styled @mui/icons-material @babel/plugin-proposal-class-properties react-router-dom browser-sync browser-sync-webpack-plugin --save-dev
+npm install bootstrap axios webpack webpack-cli @babel/core babel-loader @babel/preset-env @babel/preset-react react react-dom@5 @mui/material @emotion/react @emotion/styled @mui/icons-material @babel/plugin-proposal-class-properties react-router-dom browser-sync browser-sync-webpack-plugin --save-dev
 
 ## starting program
 //from root VoteX directory run

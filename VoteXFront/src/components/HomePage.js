@@ -1,21 +1,13 @@
-import React, { Component } from "react";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import LoginPage from "./LoginPage";
+import React from "react";
 
-export default class HomePage extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <Router>
-                <Switch>
-                    <Route exact path='/'><h1>This is HomePage</h1></Route>
-                    <Route path='/login' component={LoginPage}></Route>
-                </Switch>
-            </Router>
-        );
-    }
+export default function Home() {
+    return (
+        <div className="container homepage btn-xs">
+            <h2 className="btn container-title">Welcome To VoteX:</h2>
+            <h3 className="container-subtitle">
+                VoteX is a simple web app that is built using React, Django, Axios and
+                the Django REST Framework.
+            </h3>
+        </div>
+    );
 }
-

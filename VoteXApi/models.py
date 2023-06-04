@@ -5,6 +5,7 @@ from enum import Enum
 from django.db import models
 from multiselectfield import MultiSelectField
 
+
 class Region(Enum):
     VINNYTSIA = 'vinnytsia'
     VOLYN = 'volyn'
@@ -58,20 +59,23 @@ class Role(Enum):
 # General model for any user
 class User(models.Model):
     email = models.CharField(max_length=45, unique=True)
-    name = models.CharField(max_length=120, unique=True)
+    name = models.CharField(max_length=120, unique=True, null=True)
     password = models.CharField(max_length=45)
     register_date = models.DateTimeField(auto_now_add=True)
     region = models.CharField(
         max_length=45,
         choices=[(region.name, region.value) for region in Region],
+        null=True
     )
     organization = models.CharField(
         max_length=45,
         choices=[(organization.name, organization.value) for organization in Organization],
+        null=True
     )
     role = models.CharField(
         max_length=45,
         choices=[(role.name, role.value) for role in Role],
+        null=True
     )
 
     def __str__(self):
@@ -80,7 +84,7 @@ class User(models.Model):
 
 class Election(models.Model):
     name = models.CharField(max_length=120)
-    votes_per_voter = models.IntegerField(max_length=4)
+    votes_per_voter = models.IntegerField()
     retractable_votes = models.BooleanField(default=False)
     anonymous = models.BooleanField(default=True)
     start_of_voting = models.DateTimeField(auto_now_add=True)
@@ -99,7 +103,7 @@ class Election(models.Model):
     )
 
     def __str__(self):
-        return self.email
+        return self.name
 
 #
 #
