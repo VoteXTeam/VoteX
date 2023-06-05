@@ -7,15 +7,21 @@ import { signupPasswordValidation } from "../helpers/passwordValidations";
 import axios from "axios";
 
 const initialSignupData = {
-  username: "",
-  state: "",
+  email: "",
+  name: "",
+  region: "",
+  organization: "",
+  role: "",
   password: "",
   confirm_password: "",
 };
 
 const initialSignupErrorsData = {
-  username: [],
-  state: [],
+  email: [],
+  name: [],
+  region: [],
+  organization: [],
+  role: [],
   password: [],
   confirm_password: [],
 };
@@ -37,14 +43,14 @@ function errorToFormErrorComponent(errors) {
 export default function SignupForm({ redirect }) {
   const { signup, APIUrl } = useAuth();
   const history = useHistory();
-  let [statesList, setStatesList] = useState([]);
+  let [statesList, setRegionsList] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`${APIUrl}users/states`)
+      .get(`${APIUrl}api/regions`)
       .then(({ data }) => {
         data = data.map(([value, content]) => ({ value, content }));
-        setStatesList(data);
+        setRegionsList(data);
       })
       .catch((error) => {
         console.log(error);
@@ -124,30 +130,31 @@ export default function SignupForm({ redirect }) {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Converting the errors state into displayable compoenents
+  // Converting the errors state into displayable components
   const errorComponents = errorToFormErrorComponent(errors);
   return (
     <form className="auth-form container">
       <h2 className="auth-form-title container-title">Signup for VoteX</h2>
       <label className="form-label signup-label">
-        Username:
+        Електронна пошта:
         <input
           type="text"
-          placeholder="Username"
-          value={formData.username}
+          placeholder="email"
+          value={formData.email}
           onChange={handleChange}
           className="form-field signup username-input"
-          name="username"
+          name="email"
         />
-        {errorComponents.username}
+        {errorComponents.email}
       </label>
       <label className="form-label signup-label">
-        State:
+        Регіон:
         <select
-          value={formData.state}
+          value={formData.region}
           onChange={handleChange}
+          onClick={handleChange}
           className="form-field form-datalist signup state-input"
-          name="state"
+          name="region"
         >
           {statesList.map(({ value, content }) => (
             <option key={value} value={value}>
@@ -155,7 +162,7 @@ export default function SignupForm({ redirect }) {
             </option>
           ))}
         </select>
-        {errorComponents.state}
+        {errorComponents.region}
       </label>
       <label className="form-label signup-label">
         Password:

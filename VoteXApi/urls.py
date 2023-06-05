@@ -17,9 +17,10 @@ Including another URLconf
 from django.urls import path, include
 
 from VoteXApi import views
-from VoteXApi.views import UserList
+from VoteXApi.views import UserList, RegionChoicesListView
 
 urlpatterns = [
     path('', views.index),
-    path('api/user/', UserList.as_view()),
+    path('user', UserList.as_view()),
+    path('regions', RegionChoicesListView.as_view(), name='regions'),
 ]

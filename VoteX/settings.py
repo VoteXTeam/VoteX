@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+from corsheaders.middleware import CorsMiddleware
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 # for debug_toolbar to work on every page
 INTERNAL_IPS = [
     '127.0.0.1',
+    'localhost'
 ]
 
 # Application definition
@@ -47,6 +48,12 @@ INSTALLED_APPS = [
     'VoteXFront',
     # 'debug_toolbar',
     'rest_framework',
+    'corsheaders'
+]
+
+CORS_ALLOWED_ORIGINS = [
+    'http://127.0.0.1:8000',
+    'http://localhost:8000',
 ]
 
 MIDDLEWARE = [
@@ -58,6 +65,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 # DEBUG_TOOLBAR_CONFIG = {

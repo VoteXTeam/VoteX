@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import LoginPage from "./LoginPage";
 import HomePage from "./HomePage";
 import Nav from "./Nav";
 import {AuthProvider} from "../contexts/AuthContext";

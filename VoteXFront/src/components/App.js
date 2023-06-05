@@ -1,7 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
 import { render } from "react-dom";
-import HomePage from "./HomePage";
-import LoginPage from "./LoginPage";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 

@@ -8,7 +8,7 @@
 # //install packages:
 // if psycopg2 doesn't work, use psycopg2-binary
 ## //install pip packages (run from root folder):
-pip install django psycopg2 axios django-multiselectfield django-debug-toolbar djangorestframework django_bootstrap5
+pip install django-cors-headers django psycopg2 axios django-multiselectfield django-debug-toolbar djangorestframework django_bootstrap5
 
 ## //create scripts to sync models from models.py to postgresql (if changes was made) (from root)
 //terminal (C:\projects\VoteX)

@@ -1,10 +1,14 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from rest_framework import generics, status
-from .models import User
+from rest_framework.generics import ListAPIView
+from rest_framework.permissions import AllowAny
+
+from .models import CustomUser, REGION_CHOICES
 from .rest_serializers import UserSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
+
 
 
 # Create your views here.
@@ -15,8 +19,16 @@ def index(request):
 # example for creating api page
 
 class UserList(generics.ListCreateAPIView):
-    queryset = User.objects.all()
+    queryset = CustomUser.objects.all()
     serializer_class = UserSerializer
+
+
+class RegionChoicesListView(ListAPIView):
+    permission_classes = [AllowAny, ]
+
+    def list(self, request):
+        data = REGION_CHOICES
+        return Response(data)
 
 # reference from labs1-4
 

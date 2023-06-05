@@ -27,12 +27,12 @@ module.exports = {
         minimize: true,
     },
     plugins: [
-        new BrowserSyncPlugin({
-            host: '127.0.0.1',
-            port: 3000,
-            proxy: 'http://127.0.0.1:8000',
-            files: ['./src/**/*'],
-        }),
+        // new BrowserSyncPlugin({
+        //     host: '127.0.0.1',
+        //     port: 3000,
+        //     proxy: 'http://127.0.0.1:8000',
+        //     files: ['./src/**/*'],
+        // }),
         // new webpack.DefinePlugin({
         //     "process.env": {
         //         // This has effect on the react lib size
