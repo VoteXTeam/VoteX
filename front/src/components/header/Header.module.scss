@@ -1,0 +1,24 @@
+.wrapper {
+    padding-top: 49px;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: left;
+
+    img {
+        width: 147px;
+        height: 19px;
+    }
+
+    button {
+        position: fixed;
+        right: 10%;
+    }
+
+    :global .rainbow-m-around_medium {
+        border: 1px solid #000000;
+        color: #1c1c1c;
+        width: 100px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
