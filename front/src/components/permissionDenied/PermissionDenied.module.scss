@@ -1,0 +1,82 @@
+.wrapper {
+    padding-top: 50px;
+    max-width: 80%;
+    margin: 0 auto;
+
+    .spark {
+        position: absolute;
+        width: 31.03px;
+        height: 30.65px;
+        left: 343.99px;
+        top: 155.36px;
+    }
+
+    .home {
+        position: absolute;
+        width: 87.17px;
+        height: 81.78px;
+        left: 1441px;
+        top: 160px;
+    }
+}
+
+
+.title {
+    font-family: 'Cambria', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+    color: #00f3ad;
+}
+
+
+.header {
+    text-align: center;
+}
+
+.permissionCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    height: 180px;
+    background: rgba(94, 0, 0, 0.27);
+    border-radius: 24px;
+    margin: 120px auto 0;
+    padding: 60px;
+
+
+    .infoSection {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    h5 {
+        font-family: 'Cambria';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 120%;
+        color: #e1e1e1;
+    }
+
+    h6 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        color: #e1e1e1;
+    }
+
+    .button {
+        color: #000000;
+        font-weight: 600;
+        padding: 8px 60px;
+        font-size: 16px;
+        height: 54px;
+        width: 400px;
+    }
+}
