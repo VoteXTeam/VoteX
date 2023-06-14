@@ -1,6 +1,5 @@
 # VoteX
 ## basic install
-
 # //install packages and run:
 ## //install pip packages (run from root folder):
 pip install -r requirements.txt
