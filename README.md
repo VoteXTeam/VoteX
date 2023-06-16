@@ -8,6 +8,7 @@ python manage.py migrate
 ## //start server
 python manage.py runserver
 
-## //install npm packages and run node (run from root/front folder):
+## //install npm packages (run from root/front folder):
 npm i
+## //start (run from root/front folder):
 npm run start
